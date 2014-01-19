@@ -39,7 +39,7 @@ public class Parser {
       } else if (token.getKind() == Token.MULTIPLY) {
         result = c1 * c2;
       } else {
-        result = c1 / c2; // Divide by zero ??
+        result = c1 / c2; // Divide by zero not caught yet!
       }
       component1 = String.valueOf(result);
       token = this.lexar.getNextToken();
