@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require_relative 'lexar'
+require_relative '../src/lexar'
 
 describe Lexar do
   let(:input) { '3a2c4' }

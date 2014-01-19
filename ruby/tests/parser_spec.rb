@@ -1,4 +1,4 @@
-require_relative 'parser'
+require_relative '../src/parser'
 
 describe Parser do
   before(:each) do
