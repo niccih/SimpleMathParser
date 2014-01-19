@@ -4,20 +4,24 @@ import java.util.*;
 
 public class Parser {
   private Lexar lexar;
-  public String parse(String input) {
+  public String parse(String input) throws ArithmeticException {
     this.lexar = new Lexar(input);
-    
-    String expression_value = expression();
-    Token token = this.lexar.getNextToken();
-    
-    if (token.getKind() == Token.EXPR_END) {
-      return expression_value;
-    } else {
-      return "Error!";
+
+    try {
+      String expression_value = expression();
+      Token token = this.lexar.getNextToken();
+
+      if (token.getKind() == Token.EXPR_END) {
+        return expression_value;
+      } else {
+        throw new ArithmeticException("Problem solving expression: "+input);
+      }
+    } catch(UnsupportedOperationException e) {
+      throw new ArithmeticException(e.getMessage());
     }
   }
 
-  private String expression() {
+  private String expression() throws UnsupportedOperationException {
     String component1 = number();
     List<Integer> expr_operators = Arrays.asList(Token.PLUS, Token.MINUS, Token.MULTIPLY, Token.DIVIDE);
 
@@ -45,7 +49,7 @@ public class Parser {
     return component1;
   }
 
-  private String number() {
+  private String number() throws UnsupportedOperationException {
     Token token = this.lexar.getNextToken();
     String value = "";
 
@@ -53,6 +57,9 @@ public class Parser {
       value = expression();
       Token expected_rparen = this.lexar.getNextToken();
       // Throw exception if parenthesis not balanced
+      if (expected_rparen.getKind() != Token.RPAREN) {
+        throw new UnsupportedOperationException("Unbalanced parenthesis");
+      }
     } else if (token.getKind() == Token.NUMBER) {
       value = token.getValue();
     } else {
