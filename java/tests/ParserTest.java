@@ -1,6 +1,7 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.*;
+import SimpleMathParser.*;
 
 public class ParserTest {
   private Parser p = new Parser();

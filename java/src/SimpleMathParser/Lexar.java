@@ -1,5 +1,6 @@
+package SimpleMathParser;
 
-class Lexar {
+public class Lexar {
   public String input = "";
 
   private boolean returnPreviousToken = false;

@@ -1,6 +1,8 @@
+package SimpleMathParser;
+
 import java.util.*;
 
-class Parser {
+public class Parser {
   private Lexar lexar;
   public String parse(String input) {
     this.lexar = new Lexar(input);

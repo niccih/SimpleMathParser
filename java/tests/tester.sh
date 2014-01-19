@@ -1,9 +1,6 @@
 #!/bin/sh
 # This is for JUnit-4*
-CLASSPATH=".:/git/java/classes:junit-4.10.jar"; export CLASSPATH
-javac Token.java
-javac Lexar.java
-javac Parser.java
+CLASSPATH=".:../lib/SimpleMathParser.jar:junit-4.10.jar"; export CLASSPATH
 
 javac LexarTest.java
 java org.junit.runner.JUnitCore LexarTest

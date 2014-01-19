@@ -1,4 +1,6 @@
-class Token {
+package SimpleMathParser;
+
+public class Token {
   public static final int PLUS = 0;
   public static final int MINUS = 1;
   public static final int MULTIPLY = 2;
