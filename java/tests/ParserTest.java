@@ -16,4 +16,11 @@ public class ParserTest {
       assertEquals(output, outputs[i]);
     }
   }
+
+  @Test(expected=ArithmeticException.class)
+  public void testInvalidCharacter() {
+    String input = "3#a2c4";
+    System.out.println("Parse: "+input);
+    p.parse(input);
+  }
 }
