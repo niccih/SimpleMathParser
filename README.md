@@ -20,7 +20,7 @@ ruby installed. If it is not already installed, follow these steps:
 * Go to [RubyInstaller](http://rubyinstaller.org/downloads) and download the
 applicable installer. If you are not sure which one, choose Ruby
 1.9.3-p484.
-* Run the executable download to install
+* Run the downloaded executable to install
 * Open a command prompt
 * From the command line, execute 'gem install rspec'
 * Change directory to 'SimpleMathParse/ruby/tests' (full path dependent
@@ -32,13 +32,12 @@ applicable installer. If you are not sure which one, choose Ruby
 To compile the java classes, you will need to have the Java Development
 Kit installed. If not already installed, follow these steps:
 
-* Go to [JSK
+* Go to [JDK
 Downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 NOTE: 
 * Before downloading, you will need to accept the Oracle Binary Code
 License Agreement.
-* Choose the applicable download (Windows X64 for 64
-bit W7 and Windows X86 for 32 bit W7).
+* Choose the applicable download.
 * Once the download has completed, run the installer.
 
 
@@ -56,12 +55,12 @@ ANT is also installed. If not already installed, follow these steps:
 your equivalent version)
 * Add and environment variable ANT_HOME that points to the unzipped ant directory.
 * Append the the environment variable PATH
-  '...existing\path;%HAVA_HOME%\b;%ANT_HOME%\bin;'
+  '...existing\path;%JAVA_HOME%\bin;%ANT_HOME%\bin;'
 * Open new command prompt and change to the project directory for this
   repository. Change into the java sub directory and run 'ant'. This
 will compile the various classes and generate the SimpleMathParser.jar
 file
-* Change into the tests sub-directory and run 'tester.bat' to execure
+* Change into the tests sub-directory and run 'tester.bat' to execute
   the java unit tests.
 
 
