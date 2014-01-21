@@ -47,7 +47,7 @@ A build.xml file has been provided to simplify the java compilation and
 produce a jar file. To use this, you will need to make sure that Apache
 ANT is also installed. If not already installed, follow these steps:
 
-* Go to [Ant Downloads](https://ant.apache.orh/bindownload.cgi) and
+* Go to [Ant Downloads](https://ant.apache.org/bindownload.cgi) and
   download the zip archive (v 1.9.3 recommended).
 * Uncompress the downloaded file to any location.
 * Add an environment variable JAVA_HOME that points to your JDK
